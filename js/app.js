@@ -1,7 +1,5 @@
 //lol this ended up being way harder than I thought it was going to be, but I am glad I achieved the result I wanted, which is a list that is dynmamic based on what is typed
 
-
-
 let digimonName = document.getElementById("digi-name");
 var API;
 
@@ -62,12 +60,13 @@ function updateName(e) {
 
       let content = document.createTextNode(name);
       li.appendChild(content);
+      //setting ID to each list item so we can delete the ones we don't want
       li.setAttribute("id", `${index}`);
 
       list.append(li);
 
       if (!result) {
-       //removing negative results
+        //removing negative results
         let removed = document.getElementById(`${index}`);
         removed.remove();
       }
